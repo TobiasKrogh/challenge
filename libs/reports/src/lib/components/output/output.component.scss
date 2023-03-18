@@ -1,0 +1,101 @@
+:host {
+  --data-display-flex: 1;
+
+  display: block;
+  flex: 1;
+
+  &.show-chart {
+    --data-display-flex: 1 0 calc(55% - 1rem);
+    --aside-flex: 0 0 calc(45% - 1rem);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}
+
+.data-display {
+  flex: var(--data-display-flex);
+
+  & & {
+    align-items: center;
+    background-color: var(--hex-color-white);
+    cursor: pointer;
+    display: flex;
+    height: 4.5rem;
+  }
+}
+
+main {
+  min-width: 40rem;
+}
+
+main + footer {
+  margin-top: 1.5rem;
+}
+
+aside {
+  align-self: flex-start;
+  flex: var(--aside-flex);
+  position: sticky;
+  top: 1.5rem;
+}
+
+h3 {
+  font: var(--font-data--emphasizes);
+  margin-bottom: 2rem;
+}
+
+section + section {
+  margin-top: 0.875rem;
+}
+
+h4 {
+  display: flex;
+  flex: 1;
+  font: var(--font-data--emphasizes);
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0.875rem 1rem 0 1rem;
+  width: calc(100% - 2rem);
+
+  .col-25 {
+    width: 25%;
+  }
+
+  .align--centered {
+    text-align: center;
+  }
+
+  .align--right {
+    text-align: right;
+  }
+
+  tr {
+    height: 2.25rem;
+
+    td:first-child {
+      padding-left: 0.25rem;
+    }
+
+    td:last-child {
+      padding-right: 0.25rem;
+    }
+  }
+
+  thead tr,
+  tbody tr:nth-child(even) {
+    background-color: var(--hex-color-white);
+  }
+}
+
+.message-no-data {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}

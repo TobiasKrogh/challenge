@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainComponent When rendering And no report was generated Then it matches snapshot 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root2"
+  >
+    <header>
+      <shared-message
+        class="message-title title--with-subline"
+      >
+        
+        
+      </shared-message>
+      <reports-filters />
+    </header>
+    <div
+      class="content"
+    >
+      <shared-message
+        class="message-no-report title--with-subline"
+      >
+        
+        
+        <img
+          alt=""
+          class="message-no-report-image"
+          height="172"
+          src="/assets/images/no-report.v1.svg"
+          width="403"
+        />
+        <img
+          alt=""
+          class="message-no-report-icon"
+          src="/assets/images/icons/reports.v1.svg"
+        />
+      </shared-message>
+      
+      
+    </div>
+    
+    
+  </div>,
+}
+`;
+
+exports[`MainComponent When rendering And report was generated Then it matches snapshot 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root3"
+  >
+    <header>
+      <shared-message
+        class="message-title title--with-subline"
+      >
+        
+        
+      </shared-message>
+      <reports-filters />
+    </header>
+    <div
+      class="content"
+    >
+      <reports-output />
+      
+      
+      
+    </div>
+    
+    
+  </div>,
+}
+`;

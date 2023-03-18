@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FiltersComponent When rendering Then it matches snapshot (empty data lists) 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root2"
+  >
+    <select
+      class="form-select ng-untouched ng-pristine ng-valid"
+      formcontrolname="projectId"
+    >
+      <option
+        value=""
+      >
+          
+      </option>
+      
+    </select>
+    <select
+      class="form-select ng-untouched ng-pristine ng-valid"
+      formcontrolname="gatewayId"
+    >
+      <option
+        value=""
+      >
+          
+      </option>
+      
+    </select>
+    <input
+      class="ng-untouched ng-pristine ng-valid"
+      container="body"
+      formcontrolname="from"
+      ngbdatepicker=""
+      placement="bottom-right"
+      type="hidden"
+    />
+    
+    <button
+      class="date-picker"
+      type="button"
+    >
+       From Date 
+    </button>
+    <input
+      class="ng-untouched ng-pristine ng-valid"
+      container="body"
+      formcontrolname="to"
+      ngbdatepicker=""
+      placement="bottom-right"
+      type="hidden"
+    />
+    
+    <button
+      class="date-picker"
+      type="button"
+    >
+       To Date 
+    </button>
+    
+    <button
+      type="button"
+    >
+       
+
+    </button>
+    
+    
+  </div>,
+}
+`;
+
+exports[`FiltersComponent When rendering Then it matches snapshot 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root1"
+  >
+    <select
+      class="form-select ng-untouched ng-pristine ng-valid"
+      formcontrolname="projectId"
+    >
+      <option
+        value=""
+      >
+          
+      </option>
+      
+    </select>
+    <select
+      class="form-select ng-untouched ng-pristine ng-valid"
+      formcontrolname="gatewayId"
+    >
+      <option
+        value=""
+      >
+          
+      </option>
+      
+    </select>
+    <input
+      class="ng-untouched ng-pristine ng-valid"
+      container="body"
+      formcontrolname="from"
+      ngbdatepicker=""
+      placement="bottom-right"
+      type="hidden"
+    />
+    
+    <button
+      class="date-picker"
+      type="button"
+    >
+       From Date 
+    </button>
+    <input
+      class="ng-untouched ng-pristine ng-valid"
+      container="body"
+      formcontrolname="to"
+      ngbdatepicker=""
+      placement="bottom-right"
+      type="hidden"
+    />
+    
+    <button
+      class="date-picker"
+      type="button"
+    >
+       To Date 
+    </button>
+    
+    <button
+      type="button"
+    >
+       
+
+    </button>
+    
+    
+  </div>,
+}
+`;

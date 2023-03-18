@@ -1,0 +1,518 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OutputComponent When rendering Then it matches snapshot (multiple projects, multiple gateways) 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root2"
+  >
+    <main
+      class="data-display legend"
+    >
+      <h3>
+          
+        
+        
+         | 
+          
+        
+        
+      </h3>
+      
+      <section>
+        <div
+          class="data-display legend"
+        >
+          <h4>
+             name 
+            <reports-amount />
+          </h4>
+        </div>
+        
+        <table>
+          <colgroup>
+            <col
+              class="col-25"
+            />
+            <col
+              class="col-25"
+            />
+            
+            <col
+              class="col-25"
+            />
+            <col
+              class="col-25"
+            />
+          </colgroup>
+          <thead>
+            <tr>
+              <td>
+                Date
+              </td>
+              <td
+                class="align--centered"
+              >
+                Gateway
+              </td>
+              
+              <td
+                class="align--centered"
+              >
+                Transaction ID
+              </td>
+              <td
+                class="align--right"
+              >
+                Amount
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                undefined/undefined/date
+              </td>
+              <td
+                class="align--centered"
+              >
+                 name 
+              </td>
+              
+              <td
+                class="align--centered"
+              >
+                first
+              </td>
+              <td
+                class="align--right"
+              >
+                <reports-amount />
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+        
+        
+      </section>
+      <section>
+        <div
+          class="data-display legend"
+        >
+          <h4>
+             name 
+            <reports-amount />
+          </h4>
+        </div>
+        
+        
+        
+      </section>
+      
+    </main>
+    <footer
+      class="data-display legend"
+    >
+      <reports-amount />
+    </footer>
+    
+    
+    
+    
+    
+    
+    
+  </div>,
+}
+`;
+
+exports[`OutputComponent When rendering Then it matches snapshot (multiple projects, single gateway) 1`] = `
+DebugElement {
+  "nativeNode": <div
+    class="show-chart"
+    id="root4"
+  >
+    <main
+      class="data-display legend"
+    >
+      <h3>
+          
+        
+        
+         | 
+         name 
+        
+        
+        
+      </h3>
+      
+      <section>
+        <div
+          class="data-display legend"
+        >
+          <h4>
+             name 
+            <reports-amount />
+          </h4>
+        </div>
+        
+        <table>
+          <colgroup>
+            <col
+              class="col-25"
+            />
+            
+            <col
+              class="col-25"
+            />
+            <col
+              class="col-25"
+            />
+          </colgroup>
+          <thead>
+            <tr>
+              <td>
+                Date
+              </td>
+              
+              <td
+                class="align--centered"
+              >
+                Transaction ID
+              </td>
+              <td
+                class="align--right"
+              >
+                Amount
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                undefined/undefined/date
+              </td>
+              
+              <td
+                class="align--centered"
+              >
+                first
+              </td>
+              <td
+                class="align--right"
+              >
+                <reports-amount />
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+        
+        
+      </section>
+      <section>
+        <div
+          class="data-display legend"
+        >
+          <h4>
+             name 
+            <reports-amount />
+          </h4>
+        </div>
+        
+        
+        
+      </section>
+      
+    </main>
+    <aside>
+      
+      <reports-chart />
+      <footer
+        class="data-display legend"
+      >
+        <reports-amount />
+      </footer>
+      
+      
+      
+    </aside>
+    
+    
+    
+    
+    
+    
+    
+  </div>,
+}
+`;
+
+exports[`OutputComponent When rendering Then it matches snapshot (no data provided) 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root1"
+  >
+    <div
+      class="message-no-data"
+    >
+      <shared-message
+        class="title--with-subline"
+      >
+        
+        
+      </shared-message>
+    </div>
+    
+    
+    
+    
+    
+  </div>,
+}
+`;
+
+exports[`OutputComponent When rendering Then it matches snapshot (single project, multiple gateways) 1`] = `
+DebugElement {
+  "nativeNode": <div
+    class="show-chart"
+    id="root3"
+  >
+    <main
+      class="data-display legend"
+    >
+      <h3>
+         name 
+        
+        
+        
+         | 
+          
+        
+        
+      </h3>
+      <section>
+        <div
+          class="data-display legend"
+        >
+          <h4>
+             name 
+            <reports-amount />
+          </h4>
+        </div>
+        
+        <table>
+          <colgroup>
+            <col
+              class="col-25"
+            />
+            <col
+              class="col-25"
+            />
+            
+            <col
+              class="col-25"
+            />
+            <col
+              class="col-25"
+            />
+          </colgroup>
+          <thead>
+            <tr>
+              <td>
+                Date
+              </td>
+              <td
+                class="align--centered"
+              >
+                Gateway
+              </td>
+              
+              <td
+                class="align--centered"
+              >
+                Transaction ID
+              </td>
+              <td
+                class="align--right"
+              >
+                Amount
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                undefined/undefined/date
+              </td>
+              <td
+                class="align--centered"
+              >
+                 name 
+              </td>
+              
+              <td
+                class="align--centered"
+              >
+                first
+              </td>
+              <td
+                class="align--right"
+              >
+                <reports-amount />
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+        
+        
+      </section>
+      <section>
+        <div
+          class="data-display legend"
+        >
+          <h4>
+             name 
+            <reports-amount />
+          </h4>
+        </div>
+        
+        
+        
+      </section>
+      
+      
+    </main>
+    <aside>
+      <reports-chart />
+      <footer
+        class="data-display legend"
+      >
+        <reports-amount />
+      </footer>
+      
+      
+      
+      
+    </aside>
+    
+    
+    
+    
+    
+    
+    
+  </div>,
+}
+`;
+
+exports[`OutputComponent When rendering Then it matches snapshot (single project, single gateway) 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root5"
+  >
+    <main
+      class="data-display legend"
+    >
+      <h3>
+         name 
+        
+        
+        
+         | 
+         name 
+        
+        
+        
+      </h3>
+      
+      <section>
+        
+        <table>
+          <colgroup>
+            <col
+              class="col-25"
+            />
+            
+            <col
+              class="col-25"
+            />
+            <col
+              class="col-25"
+            />
+          </colgroup>
+          <thead>
+            <tr>
+              <td>
+                Date
+              </td>
+              
+              <td
+                class="align--centered"
+              >
+                Transaction ID
+              </td>
+              <td
+                class="align--right"
+              >
+                Amount
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                undefined/undefined/date
+              </td>
+              
+              <td
+                class="align--centered"
+              >
+                first
+              </td>
+              <td
+                class="align--right"
+              >
+                <reports-amount />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                undefined/undefined/date
+              </td>
+              
+              <td
+                class="align--centered"
+              >
+                second
+              </td>
+              <td
+                class="align--right"
+              >
+                <reports-amount />
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+        
+        
+      </section>
+      
+    </main>
+    <footer
+      class="data-display legend"
+    >
+      <reports-amount />
+    </footer>
+    
+    
+    
+    
+    
+    
+    
+  </div>,
+}
+`;

@@ -1,0 +1,5 @@
+<ng-container *ngIf="amount">
+  <ng-container *ngIf="suffix">{{ suffix }} </ng-container>
+  {{ amount | formatAmount }}
+  {{ 'CURRENCY' | translate }}
+</ng-container>

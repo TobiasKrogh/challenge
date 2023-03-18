@@ -1,0 +1,27 @@
+<ng-container *ngIf="data$ | async as data">
+  <div class="legend">
+    <span
+      *ngFor="let entry of data"
+      [ngStyle]="{
+        '--color': entry.color
+      }"
+      >{{ entry.label }}</span
+    >
+  </div>
+
+  <div
+    class="pie"
+    [ngStyle]="{
+      'background-image': pie$ | async
+    }"
+  >
+    <span
+      *ngFor="let entry of data"
+      [ngStyle]="{
+        transform: entry.labelTransform
+      }"
+    >
+      {{ entry.percentage }}%
+    </span>
+  </div>
+</ng-container>

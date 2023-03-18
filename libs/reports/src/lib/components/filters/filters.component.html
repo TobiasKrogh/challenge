@@ -1,0 +1,82 @@
+<ng-container [formGroup]="form">
+  <select class="form-select" formControlName="projectId">
+    <option value="">
+      {{ 'REPORTS.ALL_PROJECTS' | translate }}
+    </option>
+    <option *ngFor="let project of projectsAsArray" [value]="project.projectId">
+      {{ project.name }}
+    </option>
+  </select>
+
+  <select class="form-select" formControlName="gatewayId">
+    <option value="">
+      {{ 'REPORTS.ALL_GATEWAYS' | translate }}
+    </option>
+    <option *ngFor="let gateway of gatewaysAsArray" [value]="gateway.gatewayId">
+      {{ gateway.name }}
+    </option>
+  </select>
+
+  <input
+    type="hidden"
+    formControlName="from"
+    ngbDatepicker
+    #fromCalendar="ngbDatepicker"
+    container="body"
+    placement="bottom-right"
+    [positionTarget]="fromDateButton"
+    [footerTemplate]="fromFooter"
+    [minDate]="minDate"
+    [maxDate]="maxDate"
+    [startDate]="minDate"
+  />
+  <button
+    #fromDateButton
+    class="date-picker"
+    (click)="fromCalendar.toggle()"
+    type="button"
+  >
+    {{ form.from ? (form.from | formatDate) : 'From Date' }}
+  </button>
+
+  <input
+    type="hidden"
+    formControlName="to"
+    ngbDatepicker
+    #toCalendar="ngbDatepicker"
+    container="body"
+    placement="bottom-right"
+    [positionTarget]="toDateButton"
+    [footerTemplate]="toFooter"
+    [minDate]="form.from ?? minDate"
+    [maxDate]="maxDate"
+  />
+  <button
+    #toDateButton
+    class="date-picker"
+    (click)="toCalendar.toggle()"
+    type="button"
+  >
+    {{ form.to ? (form.to | formatDate) : 'To Date' }}
+  </button>
+</ng-container>
+
+<button type="button" (click)="report()">
+  {{ 'REPORTS.GENERATE' | translate }}
+</button>
+
+<ng-template #fromFooter>
+  <div class="date-reset">
+    <button (click)="form.resetControl('from'); fromCalendar.close()">
+      {{ 'RESET' | translate }}
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #toFooter>
+  <div class="date-reset">
+    <button (click)="form.resetControl('to'); toCalendar.close()">
+      {{ 'RESET' | translate }}
+    </button>
+  </div>
+</ng-template>

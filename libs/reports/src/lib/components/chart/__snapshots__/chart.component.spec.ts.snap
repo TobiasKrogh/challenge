@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartComponent When rendering And valid data was provided (gateways) Then it matches snapshot (data provided - projects) 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root2"
+  >
+    <div
+      class="legend"
+    >
+      <span
+        style="--color: #A259FF;"
+      >
+        name
+      </span>
+      <span
+        style="--color: #6497B1;"
+      >
+        name
+      </span>
+      
+    </div>
+    <div
+      class="pie"
+    >
+      <span
+        style="transform: rotate(4deg) translate(104px) rotate(-4deg);"
+      >
+         54% 
+      </span>
+      <span
+        style="transform: rotate(184.4deg) translate(104px) rotate(-184.4deg);"
+      >
+         46% 
+      </span>
+      
+    </div>
+    
+    
+  </div>,
+}
+`;
+
+exports[`ChartComponent When rendering And valid data was provided (projects) Then it matches snapshot (data provided - projects) 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root4"
+  >
+    <div
+      class="legend"
+    >
+      <span
+        style="--color: #A259FF;"
+      >
+        name
+      </span>
+      <span
+        style="--color: #6497B1;"
+      >
+        name
+      </span>
+      
+    </div>
+    <div
+      class="pie"
+    >
+      <span
+        style="transform: rotate(4deg) translate(104px) rotate(-4deg);"
+      >
+         54% 
+      </span>
+      <span
+        style="transform: rotate(184.4deg) translate(104px) rotate(-184.4deg);"
+      >
+         46% 
+      </span>
+      
+    </div>
+    
+    
+  </div>,
+}
+`;
+
+exports[`ChartComponent When rendering Then it matches snapshot (no data provided) 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root1"
+  >
+    
+  </div>,
+}
+`;

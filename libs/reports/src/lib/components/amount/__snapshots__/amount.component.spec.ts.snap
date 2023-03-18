@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AmountComponent When rendering Then it matches snapshot (amount provided) 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root2"
+  >
+    
+     50.00 
+
+    
+    
+  </div>,
+}
+`;
+
+exports[`AmountComponent When rendering Then it matches snapshot (no amount given) 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root1"
+  >
+    
+  </div>,
+}
+`;
+
+exports[`AmountComponent When rendering Then it matches snapshot (suffix and amount provided) 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root3"
+  >
+    suffix 
+    
+    
+     50.00 
+
+    
+    
+  </div>,
+}
+`;

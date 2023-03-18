@@ -1,0 +1,135 @@
+<ng-container
+  *ngIf="reportByGateway.length || reportByProject.length; else noData"
+>
+  <main class="data-display legend">
+    <h3>
+      <ng-container *ngIf="filters?.projectId as projectId; else allProjects">
+        {{ projects?.[projectId]?.name }}
+      </ng-container>
+      <ng-template #allProjects>
+        {{ 'REPORTS.ALL_PROJECTS' | translate }}
+      </ng-template>
+      |
+      <ng-container *ngIf="filters?.gatewayId as gatewayId; else allGateways">
+        {{ gateways?.[gatewayId]?.name }}
+      </ng-container>
+      <ng-template #allGateways>
+        {{ 'REPORTS.ALL_GATEWAYS' | translate }}
+      </ng-template>
+    </h3>
+
+    <section *ngFor="let report of reportByGateway">
+      <ng-container
+        *ngTemplateOutlet="
+          table;
+          context: { name: report.gateway.name, report }
+        "
+      ></ng-container>
+    </section>
+
+    <section *ngFor="let report of reportByProject">
+      <ng-container
+        *ngTemplateOutlet="
+          table;
+          context: { name: report.project.name, report }
+        "
+      ></ng-container>
+    </section>
+  </main>
+
+  <aside *ngIf="showChart; else footer">
+    <ng-container *ngIf="reportByGateway.length">
+      <ng-container
+        *ngTemplateOutlet="
+          chartWithFooter;
+          context: {
+            sources: reportByGateway,
+            suffix: 'REPORTS.TOTAL_GATEWAY' | translate
+          }
+        "
+      ></ng-container>
+    </ng-container>
+
+    <ng-container *ngIf="reportByProject.length">
+      <ng-container
+        *ngTemplateOutlet="
+          chartWithFooter;
+          context: {
+            sources: reportByProject,
+            suffix: 'REPORTS.TOTAL_PROJECT' | translate
+          }
+        "
+      ></ng-container>
+    </ng-container>
+  </aside>
+</ng-container>
+
+<ng-template #footer>
+  <footer class="data-display legend">
+    <reports-amount
+      [amount]="total"
+      [suffix]="'REPORTS.TOTAL' | translate"
+    ></reports-amount>
+  </footer>
+</ng-template>
+
+<ng-template #chartWithFooter let-sources="sources" let-suffix="suffix">
+  <reports-chart [sources]="sources" [total]="total"></reports-chart>
+
+  <footer class="data-display legend">
+    <reports-amount [amount]="total" [suffix]="suffix"></reports-amount>
+  </footer>
+</ng-template>
+
+<ng-template #table let-report="report" let-name="name">
+  <div
+    *ngIf="!isSingleGatewayAndProject"
+    class="data-display legend"
+    (click)="report.open = report.data.length > 1 ? !report.open : report.open"
+  >
+    <h4>
+      {{ name }}
+      <reports-amount
+        [amount]="report.total"
+        [suffix]="'REPORTS.TOTAL' | translate"
+      ></reports-amount>
+    </h4>
+  </div>
+  <table *ngIf="report.open">
+    <colgroup>
+      <col class="col-25" />
+      <col *ngIf="showGateway" class="col-25" />
+      <col class="col-25" />
+      <col class="col-25" />
+    </colgroup>
+    <thead>
+      <tr>
+        <td>Date</td>
+        <td *ngIf="showGateway" class="align--centered">Gateway</td>
+        <td class="align--centered">Transaction ID</td>
+        <td class="align--right">Amount</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let entry of report.data; trackBy: trackByPaymentId">
+        <td>{{ entry.created | formatDate }}</td>
+        <td *ngIf="showGateway" class="align--centered">
+          {{ gateways?.[entry.gatewayId]?.name }}
+        </td>
+        <td class="align--centered">{{ entry.paymentId }}</td>
+        <td class="align--right">
+          <reports-amount [amount]="entry.amount"></reports-amount>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ng-template>
+
+<ng-template #noData>
+  <div class="message-no-data">
+    <shared-message
+      [title]="'REPORTS.NO_DATA.TITLE' | translate"
+      [text]="'REPORTS.NO_DATA.TEXT' | translate"
+    ></shared-message>
+  </div>
+</ng-template>

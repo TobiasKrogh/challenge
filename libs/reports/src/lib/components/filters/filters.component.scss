@@ -1,0 +1,47 @@
+:host {
+  display: flex;
+  height: 2rem;
+  gap: 1.5rem;
+}
+
+select {
+  background-color: var(--hex-color-cyan);
+  background-image: url(/assets/images/icons/arrow-down.v1.svg);
+  border-radius: var(--border-radius--default);
+  color: var(--hex-color-white);
+  font: var(--font-chart-filter-action);
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  width: 8rem;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.date {
+  &-picker {
+    background-color: var(--hex-color-cyan);
+    background-image: url(/assets/images/icons/calendar.v1.svg);
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    text-align: left;
+  }
+
+  &-reset {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.5rem;
+  }
+}
+
+button {
+  background-color: var(--hex-color-blue--medium);
+  border-radius: var(--border-radius--default);
+  color: var(--hex-color-white);
+  font: var(--font-chart-filter-action);
+  height: 2rem;
+  padding: 0 0.625rem;
+  width: 8rem;
+}

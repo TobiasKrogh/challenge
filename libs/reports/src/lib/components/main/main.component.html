@@ -1,0 +1,52 @@
+<ng-container
+  *ngIf="{
+    gateways: gateways$ | async,
+    projects: projects$ | async
+  } as resolved"
+>
+  <header>
+    <shared-message
+      class="message-title"
+      [title]="'HOME.TITLE' | translate"
+      [text]="'HOME.TEXT' | translate"
+    ></shared-message>
+
+    <reports-filters
+      (filtersChange)="filters$.next($event); update($event)"
+      [gateways]="resolved.gateways"
+      [projects]="resolved.projects"
+    ></reports-filters>
+  </header>
+
+  <div class="content">
+    <ng-container *ngIf="report$ | async as report; else noReportGenerated">
+      <reports-output
+        [filters]="filters$ | async"
+        [gateways]="resolved.gateways"
+        [projects]="resolved.projects"
+        [report]="report"
+      ></reports-output>
+    </ng-container>
+
+    <ng-template #noReportGenerated>
+      <shared-message
+        class="message-no-report"
+        [title]="'HOME.EMPTY.TITLE' | translate"
+        [text]="'HOME.EMPTY.TEXT' | translate"
+      >
+        <img
+          class="message-no-report-image"
+          src="/assets/images/no-report.v1.svg"
+          alt=""
+          width="403"
+          height="172"
+        />
+        <img
+          class="message-no-report-icon"
+          src="/assets/images/icons/reports.v1.svg"
+          alt=""
+        />
+      </shared-message>
+    </ng-template>
+  </div>
+</ng-container>
