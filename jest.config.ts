@@ -1,26 +1,12 @@
-/* eslint-disable */
+import { getJestProjects } from '@nrwl/jest';
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+(globalThis as any).ngJest = {
+  skipNgcc: true,
+  tsconfig: 'tsconfig.spec.json', // this is the project root tsconfig
+};
+
 export default {
-  displayName: 'test',
-  preset: './jest.preset.js',
-  setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: './coverage/test',
-  transform: {
-    '^.+\\.(ts|mjs|js|html)$': [
-      'jest-preset-angular',
-      {
-        tsconfig: '<rootDir>/tsconfig.spec.json',
-        stringifyContentPathRegex: '\\.(html|svg)$',
-      },
-    ],
-  },
-  transformIgnorePatterns: ['node_modules/(?!.*\\.mjs$)'],
-  snapshotSerializers: [
-    'jest-preset-angular/build/serializers/no-ng-attributes',
-    'jest-preset-angular/build/serializers/ng-snapshot',
-    'jest-preset-angular/build/serializers/html-comment',
-  ],
-  testMatch: [
-    '<rootDir>/src/**/__tests__/**/*.[jt]s?(x)',
-    '<rootDir>/src/**/*(*.)@(spec|test).[jt]s?(x)',
-  ],
+  globalSetup: 'jest-preset-angular/global-setup',
+  projects: getJestProjects(),
 };
