@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageComponent When rendering Then it matches snapshot (no data) 1`] = `
+DebugElement {
+  "nativeNode": <div
+    class="title--with-subline"
+    id="root1"
+  >
+    
+    
+  </div>,
+}
+`;
+
+exports[`MessageComponent When rendering Then it matches snapshot (text provided) 1`] = `
+DebugElement {
+  "nativeNode": <div
+    class="title--with-subline"
+    id="root3"
+  >
+    
+    <p>
+      text
+    </p>
+    
+  </div>,
+}
+`;
+
+exports[`MessageComponent When rendering Then it matches snapshot (title provided) 1`] = `
+DebugElement {
+  "nativeNode": <div
+    class="title--with-subline"
+    id="root2"
+  >
+    <h2>
+      title
+    </h2>
+    
+    
+  </div>,
+}
+`;
