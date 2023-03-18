@@ -33,4 +33,17 @@ describe('UserComponent', () => {
       expect(fixture.debugElement).toMatchSnapshot();
     });
   });
+
+  describe('When fetching the user data', () => {
+    it('Then it returns properly with user data', () => {
+      component.user = MOCK_USER;
+      expect(component.abbrevation).toBe('fl');
+      expect(component.fullName).toBe('firstName lastName');
+    });
+
+    it('Then it returns properly without user data', () => {
+      expect(component.abbrevation).toBe('');
+      expect(component.fullName).toBe('');
+    });
+  });
 });
