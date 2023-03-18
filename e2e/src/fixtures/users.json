@@ -1,0 +1,12 @@
+{
+  "code": "200",
+  "data": [
+    {
+      "userId": "rahej",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@email.com"
+    }
+  ],
+  "error": null
+}
