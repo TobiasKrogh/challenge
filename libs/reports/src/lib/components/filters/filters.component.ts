@@ -41,7 +41,7 @@ export class FiltersComponent {
 
   public form = new FiltersForm();
 
-  public report(): void {
+  public generate(): void {
     this.filtersChange.emit(this.form.normalized);
   }
 

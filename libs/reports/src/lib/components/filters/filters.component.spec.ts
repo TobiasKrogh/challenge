@@ -51,14 +51,14 @@ describe('FiltersComponent', () => {
     });
   });
 
-  describe('When reporting', () => {
+  describe('When generating report', () => {
     let normalizedGetSpy: jest.SpyInstance;
 
     beforeEach(() => {
       jest.spyOn(component.filtersChange, 'emit');
       normalizedGetSpy = jest.spyOn(component.form, 'normalized', 'get');
       normalizedGetSpy.mockReturnValue({});
-      component.report();
+      component.generate();
     });
 
     it('Then the event emitter emits properly', () => {

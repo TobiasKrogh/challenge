@@ -1,4 +1,4 @@
-<ng-container [formGroup]="form">
+<form [formGroup]="form" (ngSubmit)="generate()">
   <select class="form-select" formControlName="projectId">
     <option value="">
       {{ 'REPORTS.ALL_PROJECTS' | translate }}
@@ -59,11 +59,10 @@
   >
     {{ form.to ? (form.to | formatDate) : 'To Date' }}
   </button>
-</ng-container>
-
-<button type="button" (click)="report()">
-  {{ 'REPORTS.GENERATE' | translate }}
-</button>
+  <button type="submit">
+    {{ 'REPORTS.GENERATE' | translate }}
+  </button>
+</form>
 
 <ng-template #fromFooter>
   <div class="date-reset">
