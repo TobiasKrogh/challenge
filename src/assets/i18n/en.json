@@ -1,0 +1,28 @@
+{
+  "CURRENCY": "USD",
+  "RESET": "Reset",
+  "HOME": {
+    "TITLE": "Reports",
+    "TEXT": "Easily generate a report of your transactions",
+    "EMPTY": {
+      "TITLE": "No reports",
+      "TEXT": "Currently you have no data for the reports to be generated.\nOnce you start generating traffic through the Balance application \nthe reports will be shown."
+    }
+  },
+  "NOT_FOUND": {
+    "TITLE": "Not Found",
+    "TEXT": "The page you are looking for was not found!"
+  },
+  "REPORTS": {
+    "ALL_GATEWAYS": "All Gateways",
+    "ALL_PROJECTS": "All Projects",
+    "GENERATE": "Generate report",
+    "TOTAL": "TOTAL:",
+    "TOTAL_GATEWAY": "GATEWAY TOTAL:",
+    "TOTAL_PROJECT": "PROJECT TOTAL:",
+    "NO_DATA": {
+      "TITLE": "No reports",
+      "TEXT": "No data was found related to the provided filter criteria."
+    }
+  }
+}

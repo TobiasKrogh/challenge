@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "libs/api/src/lib/model/user.interface.ts"],
   "compilerOptions": {
     "types": ["jest", "node"]
   }
