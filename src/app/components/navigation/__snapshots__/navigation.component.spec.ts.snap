@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationComponent When rendering Then it matches snapshot 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root1"
+  >
+    <nav>
+      <a
+        class="navigation-link"
+        href="/calculations"
+      >
+        <img
+          alt="calculations"
+          src="/assets/images/navigation/calculations.v1.svg"
+        />
+      </a>
+      <a
+        class="navigation-link"
+        href="/apps"
+      >
+        <img
+          alt="apps"
+          src="/assets/images/navigation/apps.v1.svg"
+        />
+      </a>
+      <a
+        class="navigation-link"
+        href="/external"
+      >
+        <img
+          alt="external"
+          src="/assets/images/navigation/external.v1.svg"
+        />
+      </a>
+      <a
+        class="navigation-link"
+        href="/reports"
+      >
+        <img
+          alt="reports"
+          src="/assets/images/navigation/reports.v1.svg"
+        />
+      </a>
+      <a
+        class="navigation-link"
+        href="/logout"
+      >
+        <img
+          alt="logout"
+          src="/assets/images/navigation/logout.v1.svg"
+        />
+      </a>
+      
+    </nav>
+  </div>,
+}
+`;

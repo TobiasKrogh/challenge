@@ -1,0 +1,15 @@
+<div class="logo">
+  <!-- <a href="#"> -->
+  <img src="/assets/images/logo.v1.svg" alt="Logo" />
+  <!-- </a> -->
+</div>
+
+<div class="menu">
+  <button class="menu-button" type="button">
+    <img src="/assets/images/menu.v1.svg" alt="Menu" />
+  </button>
+</div>
+
+<ng-container *ngIf="user$ | async as user">
+  <challenge-user [user]="user"></challenge-user>
+</ng-container>

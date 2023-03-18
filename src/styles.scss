@@ -1,1 +1,111 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/button-group';
+@import 'bootstrap/scss/buttons';
+@import 'bootstrap/scss/dropdown';
+@import 'bootstrap/scss/popover';
+@import 'bootstrap/scss/forms/form-select';
+
+:root {
+  --border-radius--default: 0.3125rem;
+  --border-radius--large: 0.625rem;
+
+  --font-body-main: 400 1rem/1.1875rem 'Roboto', sans-serif;
+  --font-chart-filter-action: 400 0.875rem/1rem 'Roboto', sans-serif;
+  --font-chart-label: 500 1rem/1.25rem 'Roboto', sans-serif;
+  --font-chart-legend: 400 0.875rem/1rem 'Roboto', sans-serif;
+  --font-headline-main: 700 1.5rem/1.75rem 'Roboto', sans-serif;
+  --font-data--emphasizes: 700 1rem/1.1875rem 'Roboto', sans-serif;
+
+  --font-weight--normal: 400;
+  --font-weight--medium: 500;
+  --font-weight--bold: 700;
+
+  --hex-color-blue: #011f4b;
+  --hex-color-blue--hover: #0052cd;
+  --hex-color-blue--light: #f1fafe;
+  --hex-color-blue--medium: #005b96;
+  --hex-color-cyan: #1bc5bd;
+  --hex-color-grey: #7e8299;
+  --hex-color-grey--light: #f3f6f9;
+  --hex-color-white: #fff;
+  --hex-color-yellow: #f6ca65;
+
+  --navigation-width: 6.25rem;
+
+  --space-right: 1.5rem;
+
+  @media (min-width: 480px) {
+    --space-right: 6.25rem;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: var(--hex-color-white);
+  color: var(--hex-color-blue);
+  font-size: 16px;
+  font: var(--font-body-main);
+}
+
+a,
+a:visited {
+  color: var(--hex-color-blue);
+  text-decoration: none;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--hex-color-blue--hover);
+    }
+  }
+
+  &:focus {
+    color: var(--hex-color-blue--hover);
+    outline: 0;
+  }
+}
+
+button {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.title--with-subline {
+  h2 {
+    font: var(--font-headline-main);
+    margin-bottom: 0;
+  }
+
+  p {
+    color: var(--hex-color-grey);
+    font-weight: var(--font-weight--bold);
+    margin-bottom: 0;
+    max-width: 30rem;
+  }
+}
+
+.data-line {
+  background-color: var(--hex-color-blue--light);
+  border-radius: var(--border-radius--large);
+}
+
+.legend {
+  background-color: var(--hex-color-blue--light);
+  border-radius: var(--border-radius--large);
+  padding: 1.125rem 1.5rem;
+}
+
+.dropdown-menu {
+  --bs-dropdown-border-color: var(--hex-color-grey);
+}

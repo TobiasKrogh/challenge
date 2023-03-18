@@ -1,0 +1,38 @@
+:host {
+  display: block;
+  width: var(--navigation-width);
+}
+
+nav {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.navigation-link {
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.calculations {
+  background-image: url(/assets/images/navigation/calculations.v1.svg);
+}
+
+.apps {
+  background-image: url(/assets/images/navigation/apps.v1.svg);
+}
+
+.external {
+  background-image: url(/assets/images/navigation/external.v1.svg);
+}
+
+.reports {
+  background-image: url(/assets/images/navigation/reports.v1.svg);
+}
+
+.logout {
+  background-image: url(/assets/images/navigation/logout.v1.svg);
+}

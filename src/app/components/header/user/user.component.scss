@@ -1,0 +1,30 @@
+:host {
+  --full-name-display: none;
+
+  align-items: center;
+  display: flex;
+
+  @media (min-width: 480px) {
+    --full-name-display: inline;
+  }
+}
+
+em {
+  align-items: center;
+  background-color: var(--hex-color-yellow);
+  border-radius: var(--border-radius--default);
+  color: var(--hex-color-white);
+  display: flex;
+  font-size: 1.4375rem;
+  font-style: normal;
+  font-weight: var(--font-weight--bold);
+  justify-content: center;
+
+  height: 2.6875rem;
+  width: 2.6875rem;
+}
+
+span {
+  display: var(--full-name-display);
+  margin-left: 0.6875rem;
+}

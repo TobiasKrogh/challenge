@@ -1,0 +1,25 @@
+:host {
+  align-items: center;
+  border-bottom: 0.125rem solid var(--hex-color-grey--light);
+  display: flex;
+  flex: 1;
+  height: 5.25rem;
+  padding-right: var(--space-right);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  width: var(--navigation-width);
+}
+
+.menu {
+  align-items: center;
+  display: flex;
+  flex: 1;
+
+  &-button {
+    height: 2.6875rem;
+    margin-left: -0.375rem;
+  }
+}

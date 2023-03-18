@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent When rendering Then it matches snapshot 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root1"
+  >
+    <header>
+      <challenge-header />
+    </header>
+    <main>
+      <challenge-navigation />
+      <router-outlet />
+      
+    </main>
+    <footer>
+      <challenge-footer />
+    </footer>
+  </div>,
+}
+`;

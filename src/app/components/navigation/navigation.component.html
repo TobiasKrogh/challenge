@@ -1,0 +1,13 @@
+<nav>
+  <a
+    *ngFor="let target of navigationTargets"
+    class="navigation-link"
+    [routerLink]="target.link"
+    routerLinkActive="{{ target.ref }}--active"
+  >
+    <img
+      src="/assets/images/navigation/{{ target.ref }}.v1.svg"
+      alt="{{ target.ref }}"
+    />
+  </a>
+</nav>

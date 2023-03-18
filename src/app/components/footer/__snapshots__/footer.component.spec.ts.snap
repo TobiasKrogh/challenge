@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FooterComponent When rendering Then it matches snapshot 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root1"
+  >
+    <a
+      href="/tac"
+      routerlink="/tac"
+    >
+      Terms&Conditions | Privacy policy
+    </a>
+  </div>,
+}
+`;

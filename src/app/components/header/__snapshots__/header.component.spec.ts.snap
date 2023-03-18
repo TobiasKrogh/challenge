@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderComponent When rendering And no user is found Then it matches snapshot 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root3"
+  >
+    <div
+      class="logo"
+    >
+      <img
+        alt="Logo"
+        src="/assets/images/logo.v1.svg"
+      />
+    </div>
+    <div
+      class="menu"
+    >
+      <button
+        class="menu-button"
+        type="button"
+      >
+        <img
+          alt="Menu"
+          src="/assets/images/menu.v1.svg"
+        />
+      </button>
+    </div>
+    
+  </div>,
+}
+`;
+
+exports[`HeaderComponent When rendering And user is found Then it matches snapshot 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root2"
+  >
+    <div
+      class="logo"
+    >
+      <img
+        alt="Logo"
+        src="/assets/images/logo.v1.svg"
+      />
+    </div>
+    <div
+      class="menu"
+    >
+      <button
+        class="menu-button"
+        type="button"
+      >
+        <img
+          alt="Menu"
+          src="/assets/images/menu.v1.svg"
+        />
+      </button>
+    </div>
+    <challenge-user />
+    
+    
+  </div>,
+}
+`;
