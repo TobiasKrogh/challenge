@@ -73,10 +73,56 @@ describe('OutputComponent', () => {
       expect(fixture.debugElement).toMatchSnapshot();
     });
 
+    it('Then it matches snapshot (multiple projects, multiple gateways - nullified)', () => {
+      component.filters = {};
+      component.gateways = null;
+      component.projects = null;
+      component.report = [
+        {
+          ...MOCK_REPORT,
+          paymentId: 'first',
+          gatewayId: 'gw-1',
+          projectId: 'p-1',
+        },
+        {
+          ...MOCK_REPORT,
+          paymentId: 'second',
+          gatewayId: 'gw-2',
+          projectId: 'p-2',
+        },
+      ];
+      fixture.detectChanges();
+      expect(fixture.debugElement).toMatchSnapshot();
+    });
+
     it('Then it matches snapshot (single project, multiple gateways)', () => {
       component.filters = {
         projectId: 'p-1',
       };
+      component.report = [
+        {
+          ...MOCK_REPORT,
+          paymentId: 'first',
+          gatewayId: 'gw-1',
+          projectId: 'p-1',
+        },
+        {
+          ...MOCK_REPORT,
+          paymentId: 'second',
+          gatewayId: 'gw-2',
+          projectId: 'p-1',
+        },
+      ];
+      fixture.detectChanges();
+      expect(fixture.debugElement).toMatchSnapshot();
+    });
+
+    it('Then it matches snapshot (single project, multiple gateways - nullified)', () => {
+      component.filters = {
+        projectId: 'p-1',
+      };
+      component.gateways = null;
+      component.projects = null;
       component.report = [
         {
           ...MOCK_REPORT,

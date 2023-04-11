@@ -1,5 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`OutputComponent When rendering Then it matches snapshot (multiple projects, multiple gateways - nullified) 1`] = `
+DebugElement {
+  "nativeNode": <div
+    id="root3"
+  >
+    <div
+      class="message-no-data"
+    >
+      <shared-message
+        class="title--with-subline"
+      >
+        
+        
+      </shared-message>
+    </div>
+    
+    
+    
+    
+    
+  </div>,
+}
+`;
+
 exports[`OutputComponent When rendering Then it matches snapshot (multiple projects, multiple gateways) 1`] = `
 DebugElement {
   "nativeNode": <div
@@ -130,7 +154,7 @@ exports[`OutputComponent When rendering Then it matches snapshot (multiple proje
 DebugElement {
   "nativeNode": <div
     class="show-chart"
-    id="root4"
+    id="root6"
   >
     <main
       class="data-display legend"
@@ -272,11 +296,36 @@ DebugElement {
 }
 `;
 
+exports[`OutputComponent When rendering Then it matches snapshot (single project, multiple gateways - nullified) 1`] = `
+DebugElement {
+  "nativeNode": <div
+    class="show-chart"
+    id="root5"
+  >
+    <div
+      class="message-no-data"
+    >
+      <shared-message
+        class="title--with-subline"
+      >
+        
+        
+      </shared-message>
+    </div>
+    
+    
+    
+    
+    
+  </div>,
+}
+`;
+
 exports[`OutputComponent When rendering Then it matches snapshot (single project, multiple gateways) 1`] = `
 DebugElement {
   "nativeNode": <div
     class="show-chart"
-    id="root3"
+    id="root4"
   >
     <main
       class="data-display legend"
@@ -410,7 +459,7 @@ DebugElement {
 exports[`OutputComponent When rendering Then it matches snapshot (single project, single gateway) 1`] = `
 DebugElement {
   "nativeNode": <div
-    id="root5"
+    id="root7"
   >
     <main
       class="data-display legend"
