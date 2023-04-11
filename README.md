@@ -52,3 +52,13 @@ Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and 
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
+
+## Security recommendations
+Angular will automatically handle some security adjustments in its [HttpClient](https://angular.io/api/common/http/HttpClient)
+
+- always escape every user input
+- do not concatenate user input with executable code
+- make JSON responses not executable by prefixing with `)]}',\n` 
+- protect against CSRF by setting a token in a session cookie and send it along each subsequent request
+- setup a [CSP](https://angular.io/guide/security#content-security-policy)
+- enforce [Trusted Types](https://angular.io/api/common/http/HttpClient)
